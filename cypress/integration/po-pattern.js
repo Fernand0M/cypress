@@ -1,12 +1,13 @@
 import {LoginPagePO} from '../support/pageObject'
+import constants from '../support/helpers/constants';
 
 describe('Page Object Pattern Example', () => {
    
     beforeEach(() => {
-      cy.visit('http://demo.automationtesting.in/Register.html')
+      cy.visit(constants.URL_DEV)
     });
 
     it('testing', () => {
-      LoginPagePO.clickOnConfirm();
+      LoginPagePO.loginPortal();
     });
 });
